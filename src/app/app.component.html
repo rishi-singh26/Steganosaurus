@@ -1,17 +1,66 @@
-
-
-<style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-  }
-</style>
-
-<div class="content" role="main">
-  <h1>Welcome to {{title}}!</h1>
-  <h2>Start editing to see some magic happen</h2>
+<section class="field-row" style="justify-content: flex-start">
+  <app-folder-btn title="Hide image in image" (onClick)="toggleHII()" [isSelected]="isHIIShown"></app-folder-btn>
+  <app-folder-btn title="Hide text in image" (onClick)="toggleHTI()" [isSelected]="isHTIShown"></app-folder-btn>
+  <app-folder-btn title="Extract image from image" (onClick)="toggleEII()" [isSelected]="isEIIShown"></app-folder-btn>
+  <app-folder-btn title="Extract text from image" (onClick)="toggleETI()" [isSelected]="isETIShown"></app-folder-btn>
+  <app-file-btn title="About Steganosaurus" (onClick)="toggleAbout()" [isSelected]="isAboutShown"></app-file-btn>
+</section>
+<!-- Hide image in image -->
+<div *ngIf="isHIIShown" class="window">
+    <div class="title-bar"> 
+        <button aria-label="Close" (click)="toggleHII()" class="close"></button>
+        <h1 class="title">Hide Image in Image</h1>
+        <!-- <button aria-label="Resize" class="resize"></button> -->
+    </div>
+    <div class="separator"></div>
+    
+    <div class="window-pane">
+        Hello world!
+    </div>
+</div>
+<!-- Hide text in image -->
+<div *ngIf="isHTIShown" class="window">
+  <div class="title-bar"> 
+      <button aria-label="Close" (click)="toggleHTI()" class="close"></button>
+      <h1 class="title">Hide Text in Image</h1>
+      <!-- <button aria-label="Resize" class="resize"></button> -->
+  </div>
+  <div class="separator"></div>
+  
+  <div class="window-pane">
+      Hello world!
+  </div>
+</div>
+<!-- Extract image from image -->
+<div *ngIf="isEIIShown" class="window">
+  <div class="title-bar"> 
+      <button aria-label="Close" (click)="toggleEII()" class="close"></button>
+      <h1 class="title">Extract Image from Image</h1>
+      <!-- <button aria-label="Resize" class="resize"></button> -->
+  </div>
+  <div class="separator"></div>
+  
+  <div class="window-pane">
+      Hello world!
+  </div>
+</div>
+<!-- Extract text from image -->
+<div *ngIf="isETIShown" class="window">
+  <div class="title-bar"> 
+      <button aria-label="Close" (click)="toggleETI()" class="close"></button>
+      <h1 class="title">Extract Text from Image</h1>
+      <!-- <button aria-label="Resize" class="resize"></button> -->
+  </div>
+  <div class="separator"></div>
+  
+  <div class="window-pane">
+      Hello world!
+  </div>
+</div>
+<!-- About -->
+<div *ngIf="isAboutShown" class="about-container">
+    <div class="standard-dialog center scale-down" style="width:30rem;">
+        <h1 class="dialog-text">The Macintosh Finder, Version 1.0 (18 Jan 84)</h1>
+        <p class="dialog-text">&copy; 1984 Apple Computer</p>
+    </div>
 </div>

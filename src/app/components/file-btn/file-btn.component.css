@@ -1,0 +1,29 @@
+.file-btn {
+  background-color: transparent;
+  border: 1px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 110px;
+  max-height: 130px;
+  padding: 2px 5px 0px 5px;
+  border-radius: 3px;
+}
+
+.selected {
+  background-color: rgba(0, 0, 0, 0.164);
+}
+
+.file-btn:hover {
+  background-color: rgba(0, 0, 0, 0.219);
+}
+
+.file-btn-text {
+  max-lines: 1;
+  text-overflow: ellipsis;
+  font-family: Inconsolata, Menlo, Chicago, Geneva;
+  font-size: 12px;
+  text-align: center;
+}
