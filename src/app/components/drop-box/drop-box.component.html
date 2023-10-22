@@ -1,1 +1,11 @@
-<p>drop-box works!</p>
+<div class="dropzone" appDropZone [allowed_extensions]="allowed_extensions" (filesChangeEmiter)="dropHandler($event)">
+    <div class="text-wrapper">
+        <div class="centered">
+            <input type="file" name="file" id="file" (change)="onFileChange($event)" accept=".png,.jpeg,.jpg">
+            <!-- <img src="../../assets/upload-file.svg" alt="upload file icon" width="40px" height="40px" /> -->
+            <h3>Drop file here</h3>
+            <h3>or</h3>
+            <label for="file" class="btn">Browse files</label>
+        </div>
+    </div>
+</div>

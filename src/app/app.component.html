@@ -10,12 +10,20 @@
     <div class="title-bar"> 
         <button aria-label="Close" (click)="toggleHII()" class="close"></button>
         <h1 class="title">Hide Image in Image</h1>
-        <!-- <button aria-label="Resize" class="resize"></button> -->
     </div>
     <div class="separator"></div>
     
     <div class="window-pane">
-        Hello world!
+        Image to be hidden
+        <app-drop-box (onFilePicked)="filePick($event)"></app-drop-box>
+        <br>
+        Public Image
+        <app-drop-box (onFilePicked)="filePick($event)"></app-drop-box>
+        <br>
+        <section class="field-row" style="justify-content: center">
+            <button class="btn">Hide image</button>
+        </section>
+        <br>
     </div>
 </div>
 <!-- Hide text in image -->

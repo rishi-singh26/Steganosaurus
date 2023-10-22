@@ -13,6 +13,11 @@ export class AppComponent {
   isETIShown = false; // Extract text from image
   isAboutShown = false; // About dialog
 
+  // HII variables
+  imageToBeShown: File | undefined;
+  imageToBeHidden: File | undefined;
+  resultImage: File | undefined;
+
   toggleHII(): void {
     this.isHIIShown = !this.isHIIShown;
     this.isHTIShown = false;
@@ -47,5 +52,9 @@ export class AppComponent {
 
   toggleAbout(): void {
     this.isAboutShown = !this.isAboutShown;
+  }
+
+  filePick(file: File) {
+    console.log(file);
   }
 }
